@@ -83,7 +83,7 @@
       <div class="flex justify-center items-center text-center mt-2">
         <div>
           <h2 class="text-3xl font-extrabold uppercase">our products</h2>
-          <h4 class="font-cursive text-xl">Shop quality items.</h4>
+          <h4 class="font-cursive text-xl">Shop quality items with us.</h4>
         </div>
       </div>
 
