@@ -9,6 +9,16 @@ export const useProductStore = defineStore('productStore', {
             fetchFailed: false
         }
     },
+    getters: {
+        modifiedProducts(state) {
+            let modifiedProducts = state.products.map(item => {
+                let commission = (2.2/100) * item.price
+                item.price = Math.ceil(item.price + commission)
+                return item
+            })
+            return modifiedProducts
+        }
+    },
     actions: {
         async getProducts(){
             try {

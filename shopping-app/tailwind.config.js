@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      body: ["'Poppins', sans-serif"],
+      body: ["'Roboto', sans-serif"],
       cursive: ["'Cedarville Cursive', cursive"]
     }
   },
