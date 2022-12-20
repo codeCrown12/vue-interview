@@ -27,9 +27,6 @@
     <div class="flex-grow overflow-y-auto">
       <slot :params="params"></slot>
     </div>
-    <div class="flex-shrink-0 flex justify-start items-center pt-4">
-      <button class="border-[1px] border-gray-800 text-gray-800 px-3 py-[2px] rounded-md text-[14px]" @click="$emit('confirm', close)">close</button>
-    </div>
     <button class="absolute top-0 right-0 mt-3 mr-2" @click="close">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />

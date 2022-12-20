@@ -15,6 +15,7 @@
           searchQuery: null,
           showCart: false,
           showToast: false,
+          showCheckout: false,
           actionInfo: { status: '', msg: '' },
           shippingFee: 0
         }
@@ -143,22 +144,40 @@
             </div>
           </div>
           
-          <div class="md:basis-2/5 basis-full md:mb-0 mb-4 text-[14px] px-2">
-            <div class="flex justify-between">
-              <p>Merchandise:</p>
-              <p>₦ {{ cartTotalPrice }}</p>
-            </div>
-            <div class="flex justify-between mt-3">
-              <p>Estimated shipping:</p>
-              <p>₦ 0</p>
-            </div>
-            <div class="flex justify-between mt-5">
-              <p class="text-lg"><strong>ORDER TOTAL</strong></p>
-              <p>₦ {{ cartTotalPrice + shippingFee }}</p>
+          <div class="md:basis-2/5 basis-full md:mb-0 mb-4 text-[14px] px-3">
+            <div class="sticky top-1">
+              <div class="flex justify-between">
+                <p>Merchandise:</p>
+                <p>₦ {{ cartTotalPrice }}</p>
+              </div>
+              <div class="flex justify-between mt-3">
+                <p>Estimated shipping:</p>
+                <p>₦ 0</p>
+              </div>
+              <div class="flex justify-between mt-5">
+                <p class="text-lg"><strong>ORDER TOTAL</strong></p>
+                <p>₦ {{ cartTotalPrice + shippingFee }}</p>
+              </div>
+              <button @click="showCheckout = true" class="w-full mt-3 px-4 py-2 text-white bg-gradient-to-r from-green-500 to-teal-500 hover:from-teal-500 hover:to-green-500 rounded-md uppercase">proceed to checkout</button>
             </div>
           </div>
         
         </div>
+      </div>
+    </modal>
+
+    <!-- Checkout coming soon modal -->
+    <modal v-model="showCheckout" @confirm="confirm" @cancel="cancel" actions="false">
+      <div class="w-full md:w-[300px] mt-3">
+          <div class="flex justify-center items-center">
+            <div>
+              <img src="https://img.icons8.com/clouds/130/null/rocket.png"/>
+              <p class="text-center">Coming soon !</p>
+              <div class="flex justify-center items-center mt-2">
+                <button class="border-[1px] border-gray-800 text-gray-800 px-3 py-[2px] rounded-md text-[14px]" @click="showCheckout = false">close</button>
+              </div>
+            </div>
+          </div>
       </div>
     </modal>
 
