@@ -158,7 +158,7 @@
                 <p class="text-lg"><strong>ORDER TOTAL</strong></p>
                 <p>₦ {{ cartTotalPrice + shippingFee }}</p>
               </div>
-              <button @click="showCheckout = true" class="w-full mt-3 px-4 py-2 text-white bg-gradient-to-r from-green-500 to-teal-500 hover:from-teal-500 hover:to-green-500 rounded-md uppercase">proceed to checkout</button>
+              <button :disabled="cartCount < 1" @click="showCheckout = true" class="disabled:opacity-60 w-full mt-3 px-4 py-2 text-white bg-gradient-to-r from-green-500 to-teal-500 hover:from-teal-500 hover:to-green-500 rounded-md uppercase">proceed to checkout</button>
             </div>
           </div>
         
