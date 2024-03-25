@@ -18,8 +18,8 @@
   <vue-final-modal
     v-slot="{ params, close }"
     v-bind="$attrs"
-    classes="flex justify-center items-center bg-white"
-    content-class="relative flex flex-col max-h-full mx-4 p-4 border dark:border-gray-800 rounded bg-white dark:bg-gray-900"
+    classes="flex justify-center items-center"
+    content-class="relative flex flex-col max-h-full mx-4 p-4 border dark:border-gray-800 rounded bg-white dark:bg-white"
   >
     <span class="mr-8 text-xl font-bold">
       <slot name="title"></slot>
