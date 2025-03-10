@@ -12,7 +12,7 @@
 <template>
     <div class="flex justify-center items-center mb-10 text-[14px] text-center">
       <div>
-        <p>Made with ❤️ and Vue JS</p>
+        <p>Made with ❤️ and React JS</p>
         <p>&copy; {{ getYear }} | codeCrown12</p>
       </div>
     </div>
